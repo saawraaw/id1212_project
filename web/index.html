@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="websocket.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Online Cookbook</h1>
+            <p>Welcome to the online cookbook! Click the Add a recipe button to start adding recipes.</p>
+            <br />
+            <div id="addRecipe">
+                <div class="button"> <a href="#" OnClick="showForm()">Add a recipe</a> </div>
+                <form id="addRecipeForm">
+                    <h3>Add a new recipe</h3>
+                    <span>Name: <input type="text" name="recipe_name" id="recipe_name"></span>
+                    <br />
+                    <span>Ingredients: <br />
+                        <textarea name="recipe_ingredients" id="recipe_ingredients" rows="4" cols="70"></textarea>
+                    </span>
+                    <span>Instructions:<br /> 
+                        <textarea name="recipe_instructions" id="recipe_instructions" rows="10" cols="70"></textarea>
+                    </span>
+                   
+                    <input type="button" class="button" value="Add" onClick=formSubmit()>
+                    <input type="reset" class="button" value="Cancel" onClick=hideForm()>
+                </form>
+            </div>
+            <br />
+            <h3>Currently added recipes</h3>
+            <div id="content">
+            </div>
+        </div>
+
+    </body>
+</html>
